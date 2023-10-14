@@ -1,6 +1,8 @@
 from os import system
 
+# Clear screen 
 system('cls')
+
 print("Welcome to tip Calculator")
 bill=input("What was the total bill? $")
 tip=input("What percentage tip would you like to give? 10%, 12%, 15% ")
