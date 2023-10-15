@@ -1,5 +1,6 @@
 from os import system
 
+# clear screen function
 system('cls')
 
 print('''
