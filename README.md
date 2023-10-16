@@ -2,7 +2,7 @@
 
 # Repository Structure
 - Day 1 to Day 100: Each day of the course has its dedicated folder. Inside these folders, you'll discover the tasks, exercises, and projects completed on that specific day.
-- 
+
 # How to Use This Repository
 - Explore Daily Tasks: Dive into each day's folder to explore the tasks and exercises completed. This can be a great way to revise specific concepts.
 - Review Projects: Check out the projects folder to see the applications built throughout the course. Analyze the code, understand the logic, and use these projects as references for your own work.
