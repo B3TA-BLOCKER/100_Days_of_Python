@@ -1,70 +1,13 @@
 from os import system
+from Hangman_words import word_list
+from Hangman_art import logo
+import random
+from Hangman_art import stages
+
 
 system('cls')
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
-
-
-#Step 1 
-word_list = ["Dog","Cat","Elephant","Lion","Tiger","Giraffe","Horse","Zebra","Kangaroo","Koala","Panda","Penguin","Dolphin","Whale","Octopus","Snake","Frog","Turtle","Ostrich","Gorilla"]
-
-#TO DO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
-import random
+print(logo)
+# - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
@@ -75,16 +18,14 @@ for _ in range(word_length):
     display += "_"
 
 
-# Asking the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-guess = input("Guess a letter: ").lower()
-
-# Checking if the letter the user guessed (guess) is one of the leters in the chosen_word.
-
 end_of_game = False
 
 while not end_of_game:
+    # Asking the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
     guess = input("Guess a letter: ").lower()
 
+    system('cls')
+    print(logo)
     #Check guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
@@ -112,7 +53,7 @@ while not end_of_game:
 
     print(stages[live])
 
-    
+
 for letter in chosen_word:
     if guess == letter :
         print(guess,end="")
